@@ -33,7 +33,7 @@ A self-contained local web dashboard that consolidates the complete service hist
 
 ## Data Sources
 
-- **53 scanned JPG images** of dealer service invoices (`sequoya pdfs/`)
+- **53 scanned JPG images** of dealer service invoices (`sequoia pdfs/`)
 - **Toyota factory maintenance schedule PDF** (`factory maintence schedule.pdf`)
 - All data verified directly from invoice images — no estimates or assumptions
 
@@ -72,7 +72,7 @@ styles.css                     — All CSS with dark/light theme variables
 skills.md                      — Project context and key rules
 FSD.md                         — Original project brief
 factory maintence schedule.pdf — Toyota factory maintenance PDF
-sequoya pdfs/                  — 53 scanned service invoice images
+sequoia pdfs/                  — 53 scanned service invoice images
 ```
 
 ---
