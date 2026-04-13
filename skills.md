@@ -6,9 +6,9 @@
 - **Engine:** 4.7L V8 2UZ-FE
 - **Transmission:** 4-speed automatic A750F (4WD)
 - **Color:** Phantom Gray Pearl
-- **Owner:** Jeff Pugh, 221 W 24th Ave, Spokane WA 99203
+- **Owner:** in Spokane WA 99203
 - **Customer #:** 8020698 (Findlay/LHM dealer system)
-- **Purchased:** ~2010, Spokane WA — $10,000 @ 100,927 mi
+- **Purchased:** ~02-22-2022, Spokane WA — $10,000 @ 100,927 mi
 - **Current Mileage:** 170,181 mi
 
 ## Project
