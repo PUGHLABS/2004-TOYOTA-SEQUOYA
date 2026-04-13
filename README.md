@@ -45,7 +45,7 @@ A self-contained local web dashboard that consolidates the complete service hist
 |---|---|
 | Purchase price | $10,000 |
 | Total documented service spend | ~$9,874 |
-| Estimated remaining work | ~$7,143 |
+| Estimated remaining work | ~$7,349–7,564 |
 
 ### Top Outstanding Items
 1. Brake Fluid Flush — ~$200

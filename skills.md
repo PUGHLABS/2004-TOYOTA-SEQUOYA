@@ -54,7 +54,8 @@ Priority: safety → longevity → cost
 7. Front Differential Axle Seals — $452.70–$516.72 (May 2025 and Feb 2026)
 8. Spark Plugs (8 plugs, V8) — ~$400–500 (20k overdue)
 9. Engine Coolant — ~$150–200 (20k overdue)
-10. Propeller Shaft Lubrication — ~$30 (no records ever found)
+10. Front Differential Needle Bearing — $206.41 (parts on order from East Coast Gear Supply, Toyota 7.5" clamshell bushing, DIY)
+11. Propeller Shaft Lubrication — ~$30 (no records ever found)
 
 ## Files
 - `index.html` — main dashboard (links to styles.css)
