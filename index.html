@@ -1,733 +1,825 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2004 Toyota Sequoia — Service Dashboard</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2004 Toyota Sequoia — Service Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- ══════════════ HEADER ══════════════ -->
-<header>
-  <div class="header-top">
-    <div class="vehicle-title">
-      <h1>2004 Toyota Sequoia</h1>
-      <span class="subtitle">4X4 Limited &nbsp;|&nbsp; 4.7L V8 2UZ-FE &nbsp;|&nbsp; Jeff Pugh, Spokane WA</span>
-    </div>
-    <div class="header-controls">
-      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">&#9728; Light Mode</button>
-    </div>
-  </div>
-  <div class="chips">
-    <span class="chip"><strong>VIN:</strong> 5TDBT48A14S230766</span>
-    <span class="chip accent"><strong>Mileage:</strong> 170,181 mi</span>
-    <span class="chip"><strong>Color:</strong> Phantom Gray Pearl</span>
-    <span class="chip"><strong>Engine:</strong> 4.7L V8 2UZ-FE</span>
-    <span class="chip"><strong>Purchased:</strong> ~2010 @ 100,927 mi &mdash; $10,000</span>
-    <span class="chip"><strong>Last Service:</strong> Feb 27, 2026 &mdash; Inv #430781</span>
-    <span class="chip warn"><strong>Next Due:</strong> ~174,000 mi (Oil / Rotation / Brakes)</span>
-  </div>
-</header>
-
-<!-- ══════════════ DASHBOARD ══════════════ -->
-<div class="dashboard">
-
-  <!-- ════ LEFT PANEL — RECOMMENDED WORK ════ -->
-  <div class="panel panel-left">
-
-    <!-- Cost Summary -->
-    <div class="cost-summary">
-      <div class="cs-row"><span>Safety items</span><span>~$2,479</span></div>
-      <div class="cs-row"><span>Longevity items</span><span>~$3,741&ndash;3,806</span></div>
-      <div class="cs-row"><span>Factory overdue / no record</span><span>~$580&ndash;730</span></div>
-      <div class="cs-row"><span>Routine maintenance</span><span>~$343</span></div>
-      <div class="cs-row"><span>Total Estimated Remaining</span><span>~$7,143&ndash;7,358</span></div>
-    </div>
-
-    <!-- SAFETY -->
-    <div class="section-label">
-      <span>&#128308; Safety &mdash; Address First</span>
-      <span class="total-badge">~$2,479</span>
-    </div>
-
-    <div class="work-item safety">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Brake Fluid Flush</span>
-        <span class="wi-cost">~$200&ndash;210</span>
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header>
+    <div class="header-top">
+      <div class="vehicle-title">
+        <h1>2004 Toyota Sequoia</h1>
+        <span class="subtitle">4X4 Limited &nbsp;|&nbsp; 4.7L V8 2UZ-FE &nbsp;|&nbsp; Spokane WA</span>
       </div>
-      <div class="wi-detail">Last done Oct 2022 @ 144,500 mi &mdash; now 170,181 mi (25,681 mi / 3.5 yrs ago). Degraded fluid lowers boiling point and reduces stopping ability. Quoted Feb 2026 @ $199.95.</div>
-    </div>
-
-    <div class="work-item safety">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Power Steering Pressure Hose</span>
-        <span class="wi-cost">$209.95</span>
-      </div>
-      <div class="wi-detail">Quoted Feb 2026 (Inv #430781). Seeping &mdash; advisor noted "clean and recheck." PS loss risk. Rack was replaced Oct 2024; hoses are original and aging.</div>
-    </div>
-
-    <div class="work-item safety">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Power Steering Return Line</span>
-        <span class="wi-cost">$1,386.05</span>
-      </div>
-      <div class="wi-detail">Quoted Feb 2026 (Inv #430781). Return line replacement &mdash; includes hose + labor. Do together with pressure hose for one labor pull.</div>
-    </div>
-
-    <div class="work-item safety">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Rear Struts (Pair)</span>
-        <span class="wi-cost">$883</span>
-      </div>
-      <div class="wi-detail">Quoted Feb 2026 pre-work order. Affects rear stability and braking performance. Front struts replaced Oct 2024 (Inv #392375).</div>
-    </div>
-
-    <!-- LONGEVITY -->
-    <div class="section-label" style="margin-top:16px;">
-      <span>&#128993; Longevity &mdash; Prevent Bigger Failures</span>
-      <span class="total-badge">~$3,741&ndash;3,806</span>
-    </div>
-
-    <div class="work-item longevity">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-longevity">Longevity</span>Camshaft Seals (Both Banks)</span>
-        <span class="wi-cost">$1,480</span>
-      </div>
-      <div class="wi-detail">Quoted Feb 2026 (Inv #430781 pre-work order) &mdash; labor only estimate. Left bank cam seal seeping. Labor intensive on V8 &mdash; requires timing cover removal. Separate job from crank seal.</div>
-    </div>
-
-    <div class="work-item longevity">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-longevity">Longevity</span>Rear Crankshaft Seal</span>
-        <span class="wi-cost">$1,808.63</span>
-      </div>
-      <div class="wi-detail">Quoted Feb 2026 pre-work order. Rear main seal leak &mdash; requires transmission removal. Separate job from camshaft seals. Address before oil loss accelerates engine wear.</div>
-    </div>
-
-    <div class="work-item longevity">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-longevity">Longevity</span>Front Differential Axle Seals</span>
-        <span class="wi-cost">$452.70&ndash;516.72</span>
-      </div>
-      <div class="wi-detail">Quoted May 2025 ($452.70, Inv #407123) and Feb 2026 ($516.72 pre-work order). Leaking &mdash; separate from CV axles (both axles replaced Oct 2024). Diff fluid loss damages bearings and gears.</div>
-    </div>
-
-    <!-- FACTORY OVERDUE -->
-    <div class="section-label" style="margin-top:16px;">
-      <span>&#128995; Factory Schedule &mdash; Overdue / No Record</span>
-      <span class="total-badge">~$580&ndash;730</span>
-    </div>
-
-    <div class="work-item overdue">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-overdue">19k Overdue</span>Spark Plugs (8 plugs &mdash; V8)</span>
-        <span class="wi-cost">~$400&ndash;500</span>
-      </div>
-      <div class="wi-detail">Factory due @ 150,000 mi. Now 170,181 &mdash; 20k overdue. Sequoia explicitly listed in Toyota factory schedule. Iridium plugs recommended for V8.</div>
-    </div>
-
-    <div class="work-item overdue">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-overdue">19k Overdue</span>Engine Coolant Replacement</span>
-        <span class="wi-cost">~$150&ndash;200</span>
-      </div>
-      <div class="wi-detail">Factory: 100k initial then every 50k. Due again @ 150k &mdash; now 169k. Last coolant flush was Oct 2022 @ 144,500 mi (not at 150k). Degraded coolant corrodes water pump and cooling system.</div>
-    </div>
-
-    <div class="work-item overdue">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-overdue">No Record</span>Propeller Shaft Lubrication</span>
-        <span class="wi-cost">~$30</span>
-      </div>
-      <div class="wi-detail">4WD Sequoia specific &mdash; factory every 5&ndash;15k miles. No service records found for this item across all 53 invoices. Critical for 4WD driveline longevity.</div>
-    </div>
-
-    <!-- MAINTENANCE -->
-    <div class="section-label" style="margin-top:16px;">
-      <span>&#128994; Routine Maintenance</span>
-      <span class="total-badge">~$343</span>
-    </div>
-
-    <div class="work-item maintenance">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-maintenance">Maint</span>Oil Change + Tire Rotation</span>
-        <span class="wi-cost">~$210</span>
-      </div>
-      <div class="wi-detail">Due ~174,000 mi (5k interval from last service Feb 27, 2026 @ 169,255). Rotation maintains even wear on Bridgestone Alenza tires (installed Nov 2024).</div>
-    </div>
-
-    <div class="work-item maintenance">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-maintenance">Maint</span>Power Steering Fluid Flush</span>
-        <span class="wi-cost">~$133</span>
-      </div>
-      <div class="wi-detail">Recommended Feb 2026. Flush old fluid to condition seals &mdash; do in conjunction with hose replacement.</div>
-    </div>
-
-    <div class="work-item maintenance">
-      <div class="wi-header">
-        <span class="wi-name"><span class="wi-badge badge-maintenance">Maint</span>Drive Belt Inspection</span>
-        <span class="wi-cost">Free w/ service</span>
-      </div>
-      <div class="wi-detail">Due @ 180k factory interval (~10,745 mi away). Inspect serpentine and AC belts for cracking or glazing.</div>
-    </div>
-
-    <!-- FACTORY TRACKER -->
-    <div class="section-label" style="margin-top:16px;">
-      <span>&#128203; Factory Maintenance Tracker</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128308;</div>
-      <div class="ri-body">
-        <div class="ri-name">Spark Plugs</div>
-        <div class="ri-detail">Due: 150,000 mi &nbsp;|&nbsp; Now: 170,181 mi &nbsp;|&nbsp; 20k overdue</div>
-      </div>
-      <span class="ri-status status-overdue">Overdue</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128308;</div>
-      <div class="ri-body">
-        <div class="ri-name">Engine Coolant</div>
-        <div class="ri-detail">Due: 150,000 mi (50k cycle) &nbsp;|&nbsp; Now: 170,181 mi &nbsp;|&nbsp; 20k overdue</div>
-      </div>
-      <span class="ri-status status-overdue">Overdue</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128308;</div>
-      <div class="ri-body">
-        <div class="ri-name">Propeller Shaft Lube (4WD)</div>
-        <div class="ri-detail">Due: every 5&ndash;15k mi &nbsp;|&nbsp; No record found in any invoice</div>
-      </div>
-      <span class="ri-status status-overdue">No Record</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128993;</div>
-      <div class="ri-body">
-        <div class="ri-name">Oil Change + Rotation</div>
-        <div class="ri-detail">Due: ~174,000 mi &nbsp;|&nbsp; Last: 169,255 mi (Feb 27, 2026)</div>
-      </div>
-      <span class="ri-status status-due">Due Soon</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128993;</div>
-      <div class="ri-body">
-        <div class="ri-name">Brake System Inspection</div>
-        <div class="ri-detail">Due: ~174,000 mi &nbsp;|&nbsp; Front brakes done Oct 2024 (Inv #392375)</div>
-      </div>
-      <span class="ri-status status-due">Due Soon</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128994;</div>
-      <div class="ri-body">
-        <div class="ri-name">Drive Belts + Exhaust Inspect</div>
-        <div class="ri-detail">Due: 180,000 mi &nbsp;|&nbsp; ~10,745 mi away</div>
-      </div>
-      <span class="ri-status status-upcoming">Upcoming</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128994;</div>
-      <div class="ri-body">
-        <div class="ri-name">Ball Joints + Steering Linkage</div>
-        <div class="ri-detail">Due: 180,000 mi inspect &nbsp;|&nbsp; ~10,745 mi away</div>
-      </div>
-      <span class="ri-status status-upcoming">Upcoming</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#128994;</div>
-      <div class="ri-body">
-        <div class="ri-name">Front Diff + Transfer Case Oil</div>
-        <div class="ri-detail">Due: 180,000 mi inspect &nbsp;|&nbsp; Front diff serviced Oct 2022 (Inv #335648)</div>
-      </div>
-      <span class="ri-status status-upcoming">Upcoming</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">Timing Belt + Water Pump</div>
-        <div class="ri-detail">Replaced: Mar 17, 2022 @ 139,367 mi (Inv #319336, Larry H. Miller) &mdash; next ~229k mi</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">Steering Rack</div>
-        <div class="ri-detail">Replaced: Oct 22, 2024 @ 161,332 mi (Inv #392375, Findlay Toyota)</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">Front Struts (Pair)</div>
-        <div class="ri-detail">Replaced: Oct 22, 2024 @ 161,332 mi (Inv #392375, Findlay Toyota)</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">CV Axles (Both Front)</div>
-        <div class="ri-detail">Replaced: Oct 22, 2024 @ 161,332 mi (Inv #392375, Findlay Toyota)</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">Transmission Flush</div>
-        <div class="ri-detail">Done: Oct 2022 @ ~144,500 mi (Inv #335648, Findlay Toyota)</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">Tires (All 4)</div>
-        <div class="ri-detail">Bridgestone Alenza AS Ultra 265/65R17 &mdash; Nov 19, 2024 @ 161,924 mi, Costco</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-    <div class="reminder-item">
-      <div class="ri-icon">&#9989;</div>
-      <div class="ri-body">
-        <div class="ri-name">Battery</div>
-        <div class="ri-detail">Interstate Batteries Group 27F &mdash; Dec 1, 2024, Costco &mdash; $141.56</div>
-      </div>
-      <span class="ri-status status-ok">Done</span>
-    </div>
-
-  </div><!-- /panel-left -->
-
-  <!-- ════ RIGHT PANEL — SERVICE HISTORY ════ -->
-  <div class="panel panel-right">
-
-    <div class="totals-bar">
-      <div class="tb-item">
-        <div class="tb-label">Total Documented Service</div>
-        <div class="tb-value">~$9,874</div>
-      </div>
-      <div class="tb-item">
-        <div class="tb-label">Purchase Price</div>
-        <div class="tb-value">$10,000</div>
-      </div>
-      <div class="tb-item">
-        <div class="tb-label">Estimated Remaining</div>
-        <div class="tb-value">~$7,143</div>
-      </div>
-      <div class="tb-item">
-        <div class="tb-label">Purchased @ Mileage</div>
-        <div class="tb-value">100,927 mi</div>
+      <div class="header-controls">
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">&#9728; Light Mode</button>
       </div>
     </div>
-
-    <div class="section-label">
-      <span>Service History &mdash; Newest to Oldest</span>
-      <span class="total-badge">18 entries</span>
+    <div class="chips">
+      <span class="chip"><strong>VIN:</strong> 5TDBT48A14S230766</span>
+      <span class="chip accent"><strong>Mileage:</strong> 170,181 mi</span>
+      <span class="chip"><strong>Color:</strong> Phantom Gray Pearl</span>
+      <span class="chip"><strong>Engine:</strong> 4.7L V8 2UZ-FE</span>
+      <span class="chip"><strong>Purchased:</strong> 02.22.2022 @ 100,927 mi &mdash; $10,000</span>
+      <span class="chip"><strong>Last Service:</strong> Feb 27, 2026 &mdash; Inv #430781</span>
+      <span class="chip warn"><strong>Next Due:</strong> ~174,000 mi (Oil / Rotation / Brakes)</span>
     </div>
+  </header>
 
-    <!-- 2026 -->
-    <div class="year-divider">2026</div>
+  <!-- ══════════════ DASHBOARD ══════════════ -->
+  <div class="dashboard">
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">February 27, 2026</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #430781 &nbsp;|&nbsp; Advisor: Brian C. Dean</div>
+    <!-- ════ LEFT PANEL — RECOMMENDED WORK ════ -->
+    <div class="panel panel-left">
+
+      <!-- Cost Summary -->
+      <div class="cost-summary">
+        <div class="cs-row"><span>Safety items</span><span>~$2,479</span></div>
+        <div class="cs-row"><span>Longevity items</span><span>~$3,741&ndash;3,806</span></div>
+        <div class="cs-row"><span>Factory overdue / no record</span><span>~$580&ndash;730</span></div>
+        <div class="cs-row"><span>Routine maintenance</span><span>~$343</span></div>
+        <div class="cs-row"><span>Total Estimated Remaining</span><span>~$7,143&ndash;7,358</span></div>
+      </div>
+
+      <!-- SAFETY -->
+      <div class="section-label">
+        <span>&#128308; Safety &mdash; Address First</span>
+        <span class="total-badge">~$2,479</span>
+      </div>
+
+      <div class="work-item safety">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Brake Fluid Flush</span>
+          <span class="wi-cost">~$200&ndash;210</span>
         </div>
-        <div>
-          <div class="se-total">$117.87</div>
-          <div class="se-mileage">169,255 mi</div>
+        <div class="wi-detail">Last done Oct 2022 @ 144,500 mi &mdash; now 170,181 mi (25,681 mi / 3.5 yrs ago).
+          Degraded fluid lowers boiling point and reduces stopping ability. Quoted Feb 2026 @ $199.95.</div>
+      </div>
+
+      <div class="work-item safety">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Power Steering Pressure Hose</span>
+          <span class="wi-cost">$209.95</span>
+        </div>
+        <div class="wi-detail">Quoted Feb 2026 (Inv #430781). Seeping &mdash; advisor noted "clean and recheck." PS loss
+          risk. Rack was replaced Oct 2024; hoses are original and aging.</div>
+      </div>
+
+      <div class="work-item safety">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Power Steering Return Line</span>
+          <span class="wi-cost">$1,386.05</span>
+        </div>
+        <div class="wi-detail">Quoted Feb 2026 (Inv #430781). Return line replacement &mdash; includes hose + labor. Do
+          together with pressure hose for one labor pull.</div>
+      </div>
+
+      <div class="work-item safety">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-safety">Safety</span>Rear Struts (Pair)</span>
+          <span class="wi-cost">$883</span>
+        </div>
+        <div class="wi-detail">Quoted Feb 2026 pre-work order. Affects rear stability and braking performance. Front
+          struts replaced Oct 2024 (Inv #392375).</div>
+      </div>
+
+      <!-- LONGEVITY -->
+      <div class="section-label" style="margin-top:16px;">
+        <span>&#128993; Longevity &mdash; Prevent Bigger Failures</span>
+        <span class="total-badge">~$3,741&ndash;3,806</span>
+      </div>
+
+      <div class="work-item longevity">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-longevity">Longevity</span>Camshaft Seals (Both
+            Banks)</span>
+          <span class="wi-cost">$1,480</span>
+        </div>
+        <div class="wi-detail">Quoted Feb 2026 (Inv #430781 pre-work order) &mdash; labor only estimate. Left bank cam
+          seal seeping. Labor intensive on V8 &mdash; requires timing cover removal. Separate job from crank seal.</div>
+      </div>
+
+      <div class="work-item longevity">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-longevity">Longevity</span>Rear Crankshaft Seal</span>
+          <span class="wi-cost">$1,808.63</span>
+        </div>
+        <div class="wi-detail">Quoted Feb 2026 pre-work order. Rear main seal leak &mdash; requires transmission
+          removal. Separate job from camshaft seals. Address before oil loss accelerates engine wear.</div>
+      </div>
+
+      <div class="work-item longevity">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-longevity">Longevity</span>Front Differential Axle
+            Seals</span>
+          <span class="wi-cost">$452.70&ndash;516.72</span>
+        </div>
+        <div class="wi-detail">Quoted May 2025 ($452.70, Inv #407123) and Feb 2026 ($516.72 pre-work order). Leaking
+          &mdash; separate from CV axles (both axles replaced Oct 2024). Diff fluid loss damages bearings and gears.
         </div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Syn-Blend) + Drain Plug Gasket</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Multi-Point Inspection (SmartPath)</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Brake Flush $199.95 | PS Pressure Hose $209.95 | PS Return Line $1,386.05 | Cam Seals $1,480</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$117.87</span></div>
-      </div>
-    </div>
 
-    <!-- 2025 -->
-    <div class="year-divider">2025</div>
+      <!-- FACTORY OVERDUE -->
+      <div class="section-label" style="margin-top:16px;">
+        <span>&#128995; Factory Schedule &mdash; Overdue / No Record</span>
+        <span class="total-badge">~$580&ndash;730</span>
+      </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">June 3, 2025</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #409384 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+      <div class="work-item overdue">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-overdue">19k Overdue</span>Spark Plugs (8 plugs &mdash;
+            V8)</span>
+          <span class="wi-cost">~$400&ndash;500</span>
         </div>
-        <div>
-          <div class="se-total">$1,027.64</div>
-          <div class="se-mileage">165,584 mi</div>
-        </div>
+        <div class="wi-detail">Factory due @ 150,000 mi. Now 170,181 &mdash; 20k overdue. Sequoia explicitly listed in
+          Toyota factory schedule. Iridium plugs recommended for V8.</div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Fuel Sending Unit Replacement (gas gauge not working)</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Gage Assy, Fuel Send (83320-34041): $184.69</span><span class="line-cost">parts</span></div>
-        <div class="se-line"><span class="line-desc">Gasket, Fuel Suction (77169): $17.23</span><span class="line-cost">parts</span></div>
-        <div class="se-line"><span class="line-desc">Labor: $640.00 &nbsp;|&nbsp; Sublet: $85.00</span><span class="line-cost">labor/sublet</span></div>
-        <div class="se-line"><span class="line-desc">Check Open Recalls &mdash; none found</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$1,027.64</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">May 1, 2025</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #407123 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+      <div class="work-item overdue">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-overdue">19k Overdue</span>Engine Coolant Replacement</span>
+          <span class="wi-cost">~$150&ndash;200</span>
         </div>
-        <div>
-          <div class="se-total">$103.17</div>
-          <div class="se-mileage">164,860 mi</div>
-        </div>
+        <div class="wi-detail">Factory: 100k initial then every 50k. Due again @ 150k &mdash; now 169k. Last coolant
+          flush was Oct 2022 @ 144,500 mi (not at 150k). Degraded coolant corrodes water pump and cooling system.</div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30)</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Multi-Point Inspection</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Check Open Recalls &mdash; none</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Front Diff Axle Seals $452.70 | BG Brake Flush $159.95</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$103.17</span></div>
-      </div>
-    </div>
 
-    <!-- 2024 -->
-    <div class="year-divider">2024</div>
+      <div class="work-item overdue">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-overdue">No Record</span>Propeller Shaft Lubrication</span>
+          <span class="wi-cost">~$30</span>
+        </div>
+        <div class="wi-detail">4WD Sequoia specific &mdash; factory every 5&ndash;15k miles. No service records found
+          for this item across all 53 invoices. Critical for 4WD driveline longevity.</div>
+      </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">December 1, 2024</div>
-          <div class="se-shop">Costco Tire Center &mdash; Store 670, Spokane WA</div>
-          <div class="se-invoice">Invoice #6700325257 &nbsp;|&nbsp; Battery Purchase</div>
-        </div>
-        <div>
-          <div class="se-total">$141.56</div>
-          <div class="se-mileage">~167,500 mi</div>
-        </div>
+      <!-- MAINTENANCE -->
+      <div class="section-label" style="margin-top:16px;">
+        <span>&#128994; Routine Maintenance</span>
+        <span class="total-badge">~$343</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Interstate Batteries Group 27F STD &mdash; 36 Month Prorated Warranty</span><span class="line-cost">$114.99</span></div>
-        <div class="se-line"><span class="line-desc">Battery Core Fee</span><span class="line-cost">$15.00</span></div>
-        <div class="se-line"><span class="line-desc">Tax (8.9%)</span><span class="line-cost">$11.57</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$141.56</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">November 19, 2024</div>
-          <div class="se-shop">Costco Tire Center &mdash; 5601 E Sprague Ave, Spokane WA</div>
-          <div class="se-invoice">Invoice #5700324176 &nbsp;|&nbsp; Tire Purchase (E-Commerce)</div>
+      <div class="work-item maintenance">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-maintenance">Maint</span>Oil Change + Tire Rotation</span>
+          <span class="wi-cost">~$210</span>
         </div>
-        <div>
-          <div class="se-total">$1,086.00</div>
-          <div class="se-mileage">161,924 mi</div>
-        </div>
+        <div class="wi-detail">Due ~174,000 mi (5k interval from last service Feb 27, 2026 @ 169,255). Rotation
+          maintains even wear on Bridgestone Alenza tires (installed Nov 2024).</div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">4x Bridgestone Alenza AS Ultra &mdash; 265/65R17 112T &mdash; All-Season CUV/SUV</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Mounting, Balancing, TPMS Service Pack, Disposal</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Air Pressure Set: Front 32 / Rear 32 &nbsp;|&nbsp; Torque: 83 ft-lb</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid (user confirmed)</span><span class="line-cost bold">$1,086.00</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">October 22, 2024 <span class="milestone">MAJOR</span></div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #392375 &nbsp;|&nbsp; Advisor: Jordan Martinez &nbsp;|&nbsp; Tech: Kody</div>
+      <div class="work-item maintenance">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-maintenance">Maint</span>Power Steering Fluid Flush</span>
+          <span class="wi-cost">~$133</span>
         </div>
-        <div>
-          <div class="se-total">$3,795.44</div>
-          <div class="se-mileage">161,332 mi</div>
-        </div>
+        <div class="wi-detail">Recommended Feb 2026. Flush old fluid to condition seals &mdash; do in conjunction with
+          hose replacement.</div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Air Filter Element Replacement</span><span class="line-cost">$29.95</span></div>
-        <div class="se-line"><span class="line-desc">CV Axle RF Replacement (T08088 + T09999 axle assemblies)</span><span class="line-cost">$496.96</span></div>
-        <div class="se-line"><span class="line-desc">CV Axle LF Replacement (T08088 + T09999 axle assemblies)</span><span class="line-cost">$439.92</span></div>
-        <div class="se-line"><span class="line-desc">4-Wheel Alignment (thrust line)</span><span class="line-cost">$139.95</span></div>
-        <div class="se-line"><span class="line-desc">Steering Rack Replacement (reman gear assy + wheel lock kit)</span><span class="line-cost">$1,594.88</span></div>
-        <div class="se-line"><span class="line-desc">Front Struts Replacement &mdash; Both (LF shock leaking)</span><span class="line-cost">$1,009.94</span></div>
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change + Multi-Point Inspection</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">10% Parts &amp; Labor Discount</span><span class="line-cost">&minus;$350.00</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Rear Struts $883 | Cam Seals $1,480 | Crank Seal $1,808 | Diff Seals $516 | PS Flush</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid (Visa, confirmed)</span><span class="line-cost bold">$3,795.44</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">September 2024</div>
-          <div class="se-shop">Motion Auto Supply &mdash; 120 S Cedar, Spokane WA (parts store)</div>
-          <div class="se-invoice">Receipt #2-9785562 &nbsp;|&nbsp; DIY Rear Brake Install</div>
+      <div class="work-item maintenance">
+        <div class="wi-header">
+          <span class="wi-name"><span class="wi-badge badge-maintenance">Maint</span>Drive Belt Inspection</span>
+          <span class="wi-cost">Free w/ service</span>
         </div>
-        <div>
-          <div class="se-total">~$331.54</div>
-          <div class="se-mileage">~157,000 mi</div>
-        </div>
+        <div class="wi-detail">Due @ 180k factory interval (~10,745 mi away). Inspect serpentine and AC belts for
+          cracking or glazing.</div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Ray Bestos Rear Brake Calipers (2), Rotors, Pads</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Self-installed &mdash; parts store purchase, no dealer labor</span><span class="line-cost">~$331.54</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">February 6, 2024</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #372872 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
-        </div>
-        <div>
-          <div class="se-total">$73.81</div>
-          <div class="se-mileage">156,252 mi</div>
-        </div>
+      <!-- FACTORY TRACKER -->
+      <div class="section-label" style="margin-top:16px;">
+        <span>&#128203; Factory Maintenance Tracker</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Syn-Blend)</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Multi-Point Inspection &mdash; Basic Diagnostic</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Check Open Recalls &mdash; none</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Rear Brakes $526.46 | Steering Rack $1,319.93 | CV Axle Boots | Alignment | Battery $254.95</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$73.81</span></div>
-      </div>
-    </div>
 
-    <!-- 2023 -->
-    <div class="year-divider">2023</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128308;</div>
+        <div class="ri-body">
+          <div class="ri-name">Spark Plugs</div>
+          <div class="ri-detail">Due: 150,000 mi &nbsp;|&nbsp; Now: 170,181 mi &nbsp;|&nbsp; 20k overdue</div>
+        </div>
+        <span class="ri-status status-overdue">Overdue</span>
+      </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">October 27, 2023</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; Parts Counter</div>
-          <div class="se-invoice">Invoice #3291436 &nbsp;|&nbsp; Parts Purchase</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128308;</div>
+        <div class="ri-body">
+          <div class="ri-name">Engine Coolant</div>
+          <div class="ri-detail">Due: 150,000 mi (50k cycle) &nbsp;|&nbsp; Now: 170,181 mi &nbsp;|&nbsp; 20k overdue
+          </div>
         </div>
-        <div>
-          <div class="se-total">$272.79</div>
-          <div class="se-mileage">~155,000 mi</div>
-        </div>
+        <span class="ri-status status-overdue">Overdue</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">S051 Switch IR (04222-12010): $149.97</span><span class="line-cost">parts</span></div>
-        <div class="se-line"><span class="line-desc">S051 Switch IR (04222-35121): $100.30</span><span class="line-cost">parts</span></div>
-        <div class="se-line"><span class="line-desc">Sales Tax: $22.52</span><span class="line-cost">tax</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid (Credit Card)</span><span class="line-cost bold">$272.79</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">June 7, 2023</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #353782 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128308;</div>
+        <div class="ri-body">
+          <div class="ri-name">Propeller Shaft Lube (4WD)</div>
+          <div class="ri-detail">Due: every 5&ndash;15k mi &nbsp;|&nbsp; No record found in any invoice</div>
         </div>
-        <div>
-          <div class="se-total">$63.11</div>
-          <div class="se-mileage">150,565 mi</div>
-        </div>
+        <span class="ri-status status-overdue">No Record</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Valvoline)</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Multi-Point Inspection (15)</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Steering Rack $1,811.99</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$63.11</span></div>
-      </div>
-    </div>
 
-    <!-- 2022 -->
-    <div class="year-divider">2022</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128993;</div>
+        <div class="ri-body">
+          <div class="ri-name">Oil Change + Rotation</div>
+          <div class="ri-detail">Due: ~174,000 mi &nbsp;|&nbsp; Last: 169,255 mi (Feb 27, 2026)</div>
+        </div>
+        <span class="ri-status status-due">Due Soon</span>
+      </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">October 22, 2022</div>
-          <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #335648 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128993;</div>
+        <div class="ri-body">
+          <div class="ri-name">Brake System Inspection</div>
+          <div class="ri-detail">Due: ~174,000 mi &nbsp;|&nbsp; Front brakes done Oct 2024 (Inv #392375)</div>
         </div>
-        <div>
-          <div class="se-total">$848.59</div>
-          <div class="se-mileage">~144,500 mi</div>
-        </div>
+        <span class="ri-status status-due">Due Soon</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change + Multi-Point Inspection</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Valvoline Brake Fluid System Flush (12F)</span><span class="line-cost">$144.95</span></div>
-        <div class="se-line"><span class="line-desc">Front Drive Train Service &mdash; 4AT (differential / front axle)</span><span class="line-cost">$212.94</span></div>
-        <div class="se-line"><span class="line-desc">Valvoline Automatic Transmission Flush (6F/4F)</span><span class="line-cost">$332.46</span></div>
-        <div class="se-line"><span class="line-desc">Spare Tire Pressure Check</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$848.59</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">April 28, 2022</div>
-          <div class="se-shop">Larry H. Miller Downtown Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #322735 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128994;</div>
+        <div class="ri-body">
+          <div class="ri-name">Drive Belts + Exhaust Inspect</div>
+          <div class="ri-detail">Due: 180,000 mi &nbsp;|&nbsp; ~10,745 mi away</div>
         </div>
-        <div>
-          <div class="se-total">$45.33</div>
-          <div class="se-mileage">140,586 mi</div>
-        </div>
+        <span class="ri-status status-upcoming">Upcoming</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Valvoline) + Multi-Point Inspection</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Brake Flush $144.95 | Diff Service | Trans Flush</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$45.33</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">March 17, 2022 <span class="milestone">MAJOR</span></div>
-          <div class="se-shop">Larry H. Miller Downtown Toyota Spokane &mdash; 1128 W 3rd Ave</div>
-          <div class="se-invoice">Invoice #319336 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128994;</div>
+        <div class="ri-body">
+          <div class="ri-name">Ball Joints + Steering Linkage</div>
+          <div class="ri-detail">Due: 180,000 mi inspect &nbsp;|&nbsp; ~10,745 mi away</div>
         </div>
-        <div>
-          <div class="se-total">$1,800.72</div>
-          <div class="se-mileage">139,367 mi</div>
-        </div>
+        <span class="ri-status status-upcoming">Upcoming</span>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Timing Belt (8-Cylinder) + Water Pump Replacement</span><span class="line-cost">$978.55</span></div>
-        <div class="se-line"><span class="line-desc">Fuel Injector Reseal &mdash; Driver Side #1 (new o-ring, no leak)</span><span class="line-cost">$230.00</span></div>
-        <div class="se-line"><span class="line-desc">Rear Wiper Blade Replacement</span><span class="line-cost">$26.51</span></div>
-        <div class="se-line"><span class="line-desc">Multi-Point Inspection</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Recommended but declined: Steering Rack $1,100 | CV Axles $1,100 ea | PS Flush | Brake Flush | Trans Flush</span><span class="line-cost">declined</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$1,800.72</span></div>
-      </div>
-    </div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">March 14, 2022</div>
-          <div class="se-shop">Larry H. Miller Downtown Toyota Spokane &mdash; Parts Counter</div>
-          <div class="se-invoice">Invoice #3250104 &nbsp;|&nbsp; Parts Purchase</div>
+      <div class="reminder-item">
+        <div class="ri-icon">&#128994;</div>
+        <div class="ri-body">
+          <div class="ri-name">Front Diff + Transfer Case Oil</div>
+          <div class="ri-detail">Due: 180,000 mi inspect &nbsp;|&nbsp; Front diff serviced Oct 2022 (Inv #335648)</div>
         </div>
-        <div>
-          <div class="se-total">$93.45</div>
-          <div class="se-mileage">~139,000 mi</div>
+        <span class="ri-status status-upcoming">Upcoming</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">Timing Belt + Water Pump</div>
+          <div class="ri-detail">Replaced: Mar 17, 2022 @ 139,367 mi (Inv #319336, Larry H. Miller) &mdash; next ~229k
+            mi</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">Steering Rack</div>
+          <div class="ri-detail">Replaced: Oct 22, 2024 @ 161,332 mi (Inv #392375, Findlay Toyota)</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">Front Struts (Pair)</div>
+          <div class="ri-detail">Replaced: Oct 22, 2024 @ 161,332 mi (Inv #392375, Findlay Toyota)</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">CV Axles (Both Front)</div>
+          <div class="ri-detail">Replaced: Oct 22, 2024 @ 161,332 mi (Inv #392375, Findlay Toyota)</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">Transmission Flush</div>
+          <div class="ri-detail">Done: Oct 2022 @ ~144,500 mi (Inv #335648, Findlay Toyota)</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">Tires (All 4)</div>
+          <div class="ri-detail">Bridgestone Alenza AS Ultra 265/65R17 &mdash; Nov 19, 2024 @ 161,924 mi, Costco</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+      <div class="reminder-item">
+        <div class="ri-icon">&#9989;</div>
+        <div class="ri-body">
+          <div class="ri-name">Battery</div>
+          <div class="ri-detail">Interstate Batteries Group 27F &mdash; Dec 1, 2024, Costco &mdash; $141.56</div>
+        </div>
+        <span class="ri-status status-ok">Done</span>
+      </div>
+
+    </div><!-- /panel-left -->
+
+    <!-- ════ RIGHT PANEL — SERVICE HISTORY ════ -->
+    <div class="panel panel-right">
+
+      <div class="totals-bar">
+        <div class="tb-item">
+          <div class="tb-label">Total Documented Service</div>
+          <div class="tb-value">~$9,874</div>
+        </div>
+        <div class="tb-item">
+          <div class="tb-label">Purchase Price</div>
+          <div class="tb-value">$10,000</div>
+        </div>
+        <div class="tb-item">
+          <div class="tb-label">Estimated Remaining</div>
+          <div class="tb-value">~$7,143</div>
+        </div>
+        <div class="tb-item">
+          <div class="tb-label">Purchased @ Mileage</div>
+          <div class="tb-value">100,927 mi</div>
         </div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">S039 Gauge Assembly (related to fuel sender / gas smell diagnosis)</span><span class="line-cost">$85.73</span></div>
-        <div class="se-line"><span class="line-desc">Sales Tax: $7.72</span><span class="line-cost">tax</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid (Cash)</span><span class="line-cost bold">$93.45</span></div>
+
+      <div class="section-label">
+        <span>Service History &mdash; Newest to Oldest</span>
+        <span class="total-badge">18 entries</span>
       </div>
-    </div>
 
-    <!-- 2021 -->
-    <div class="year-divider">2021 &mdash; Texas</div>
+      <!-- 2026 -->
+      <div class="year-divider">2026</div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">December 17, 2021</div>
-          <div class="se-shop">Don Ringler Toyota &mdash; Temple, TX (P.O. Box 1928)</div>
-          <div class="se-invoice">Invoice #358701 &nbsp;|&nbsp; Advisor: McKenzie R. Good</div>
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">February 27, 2026</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #430781 &nbsp;|&nbsp; Advisor: Brian C. Dean</div>
+          </div>
+          <div>
+            <div class="se-total">$117.87</div>
+            <div class="se-mileage">169,255 mi</div>
+          </div>
         </div>
-        <div>
-          <div class="se-total">$72.00</div>
-          <div class="se-mileage">134,317 mi</div>
-        </div>
-      </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">Toyota Conventional Oil + Filter Change</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Tire Rotation</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Multi-Point Vehicle Inspection</span><span class="line-cost">incl.</span></div>
-        <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$72.00</span></div>
-      </div>
-    </div>
-
-    <!-- 2020 -->
-    <div class="year-divider">2020</div>
-
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">April 23, 2020</div>
-          <div class="se-shop">Alignment Shop (printout only &mdash; shop name not on document)</div>
-          <div class="se-invoice">Thrust Line Alignment Printout</div>
-        </div>
-        <div>
-          <div class="se-total">&mdash;</div>
-          <div class="se-mileage">~119,000 mi</div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Syn-Blend) + Drain Plug
+              Gasket</span><span class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Multi-Point Inspection (SmartPath)</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Brake Flush $199.95 | PS Pressure Hose
+              $209.95 | PS Return Line $1,386.05 | Cam Seals $1,480</span><span class="line-cost">declined</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$117.87</span>
+          </div>
         </div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">4-Wheel Thrust Line Alignment &mdash; VIN confirmed on printout</span><span class="line-cost">cost N/A</span></div>
-        <div class="se-line"><span class="line-desc">LF: Camber -0.4&deg;, Caster 3.1&deg;, Toe 0.00&deg; &nbsp;|&nbsp; RF: Camber -0.1&deg;, Caster 3.1&deg;, Toe 0.00&deg;</span><span class="line-cost"></span></div>
-        <div class="se-line"><span class="line-desc">Rear Total Toe: 0.05&deg;, Thrust Angle: -0.23&deg;</span><span class="line-cost"></span></div>
-      </div>
-    </div>
 
-    <!-- Purchase -->
-    <div class="year-divider">~2010 &mdash; Purchase</div>
+      <!-- 2025 -->
+      <div class="year-divider">2025</div>
 
-    <div class="service-entry">
-      <div class="se-header">
-        <div class="se-meta">
-          <div class="se-date">~2010 <span class="milestone">PURCHASED</span></div>
-          <div class="se-shop">Spokane, WA</div>
-          <div class="se-invoice">Sales Brochure on File</div>
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">June 3, 2025</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #409384 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$1,027.64</div>
+            <div class="se-mileage">165,584 mi</div>
+          </div>
         </div>
-        <div>
-          <div class="se-total">$10,000</div>
-          <div class="se-mileage">100,927 mi</div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Fuel Sending Unit Replacement (gas gauge not working)</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Gage Assy, Fuel Send (83320-34041): $184.69</span><span
+              class="line-cost">parts</span></div>
+          <div class="se-line"><span class="line-desc">Gasket, Fuel Suction (77169): $17.23</span><span
+              class="line-cost">parts</span></div>
+          <div class="se-line"><span class="line-desc">Labor: $640.00 &nbsp;|&nbsp; Sublet: $85.00</span><span
+              class="line-cost">labor/sublet</span></div>
+          <div class="se-line"><span class="line-desc">Check Open Recalls &mdash; none found</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$1,027.64</span>
+          </div>
         </div>
       </div>
-      <div class="se-items">
-        <div class="se-line"><span class="line-desc">2004 Toyota Sequoia Limited 4WD &mdash; Phantom Gray Pearl &mdash; 4.7L V8</span><span class="line-cost bold">$10,000</span></div>
-        <div class="se-line"><span class="line-desc">VIN: 5TDBT48A14S230766 &nbsp;|&nbsp; Color: Phantom Gray Pearl &nbsp;|&nbsp; Engine: CTL CQA</span><span class="line-cost"></span></div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">May 1, 2025</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #407123 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$103.17</div>
+            <div class="se-mileage">164,860 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30)</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Multi-Point Inspection</span><span class="line-cost">incl.</span>
+          </div>
+          <div class="se-line"><span class="line-desc">Check Open Recalls &mdash; none</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Front Diff Axle Seals $452.70 | BG
+              Brake Flush $159.95</span><span class="line-cost">declined</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$103.17</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-  </div><!-- /panel-right -->
-</div><!-- /dashboard -->
+      <!-- 2024 -->
+      <div class="year-divider">2024</div>
 
-<script>
-  function toggleTheme() {
-    const html = document.documentElement;
-    const btn = document.getElementById('themeBtn');
-    if (html.getAttribute('data-theme') === 'dark') {
-      html.setAttribute('data-theme', 'light');
-      btn.textContent = '\uD83C\uDF19 Dark Mode';
-    } else {
-      html.setAttribute('data-theme', 'dark');
-      btn.textContent = '\u2600 Light Mode';
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">December 1, 2024</div>
+            <div class="se-shop">Costco Tire Center &mdash; Store 670, Spokane WA</div>
+            <div class="se-invoice">Invoice #6700325257 &nbsp;|&nbsp; Battery Purchase</div>
+          </div>
+          <div>
+            <div class="se-total">$141.56</div>
+            <div class="se-mileage">~167,500 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Interstate Batteries Group 27F STD &mdash; 36 Month Prorated
+              Warranty</span><span class="line-cost">$114.99</span></div>
+          <div class="se-line"><span class="line-desc">Battery Core Fee</span><span class="line-cost">$15.00</span>
+          </div>
+          <div class="se-line"><span class="line-desc">Tax (8.9%)</span><span class="line-cost">$11.57</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$141.56</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">November 19, 2024</div>
+            <div class="se-shop">Costco Tire Center &mdash; 5601 E Sprague Ave, Spokane WA</div>
+            <div class="se-invoice">Invoice #5700324176 &nbsp;|&nbsp; Tire Purchase (E-Commerce)</div>
+          </div>
+          <div>
+            <div class="se-total">$1,086.00</div>
+            <div class="se-mileage">161,924 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">4x Bridgestone Alenza AS Ultra &mdash; 265/65R17 112T &mdash;
+              All-Season CUV/SUV</span><span class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Mounting, Balancing, TPMS Service Pack, Disposal</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Air Pressure Set: Front 32 / Rear 32 &nbsp;|&nbsp; Torque: 83
+              ft-lb</span><span class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid (user confirmed)</span><span
+              class="line-cost bold">$1,086.00</span></div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">October 22, 2024 <span class="milestone">MAJOR</span></div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #392375 &nbsp;|&nbsp; Advisor: Jordan Martinez &nbsp;|&nbsp; Tech: Kody
+            </div>
+          </div>
+          <div>
+            <div class="se-total">$3,795.44</div>
+            <div class="se-mileage">161,332 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Air Filter Element Replacement</span><span
+              class="line-cost">$29.95</span></div>
+          <div class="se-line"><span class="line-desc">CV Axle RF Replacement (T08088 + T09999 axle
+              assemblies)</span><span class="line-cost">$496.96</span></div>
+          <div class="se-line"><span class="line-desc">CV Axle LF Replacement (T08088 + T09999 axle
+              assemblies)</span><span class="line-cost">$439.92</span></div>
+          <div class="se-line"><span class="line-desc">4-Wheel Alignment (thrust line)</span><span
+              class="line-cost">$139.95</span></div>
+          <div class="se-line"><span class="line-desc">Steering Rack Replacement (reman gear assy + wheel lock
+              kit)</span><span class="line-cost">$1,594.88</span></div>
+          <div class="se-line"><span class="line-desc">Front Struts Replacement &mdash; Both (LF shock
+              leaking)</span><span class="line-cost">$1,009.94</span></div>
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change + Multi-Point Inspection</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">10% Parts &amp; Labor Discount</span><span
+              class="line-cost">&minus;$350.00</span></div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Rear Struts $883 | Cam Seals $1,480 |
+              Crank Seal $1,808 | Diff Seals $516 | PS Flush</span><span class="line-cost">declined</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid (Visa, confirmed)</span><span
+              class="line-cost bold">$3,795.44</span></div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">September 2024</div>
+            <div class="se-shop">Motion Auto Supply &mdash; 120 S Cedar, Spokane WA (parts store)</div>
+            <div class="se-invoice">Receipt #2-9785562 &nbsp;|&nbsp; DIY Rear Brake Install</div>
+          </div>
+          <div>
+            <div class="se-total">~$331.54</div>
+            <div class="se-mileage">~157,000 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Ray Bestos Rear Brake Calipers (2), Rotors, Pads</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Self-installed &mdash; parts store purchase, no dealer
+              labor</span><span class="line-cost">~$331.54</span></div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">February 6, 2024</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #372872 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$73.81</div>
+            <div class="se-mileage">156,252 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Syn-Blend)</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Multi-Point Inspection &mdash; Basic Diagnostic</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Check Open Recalls &mdash; none</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Rear Brakes $526.46 | Steering Rack
+              $1,319.93 | CV Axle Boots | Alignment | Battery $254.95</span><span class="line-cost">declined</span>
+          </div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$73.81</span></div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="year-divider">2023</div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">October 27, 2023</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; Parts Counter</div>
+            <div class="se-invoice">Invoice #3291436 &nbsp;|&nbsp; Parts Purchase</div>
+          </div>
+          <div>
+            <div class="se-total">$272.79</div>
+            <div class="se-mileage">~155,000 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">S051 Switch IR (04222-12010): $149.97</span><span
+              class="line-cost">parts</span></div>
+          <div class="se-line"><span class="line-desc">S051 Switch IR (04222-35121): $100.30</span><span
+              class="line-cost">parts</span></div>
+          <div class="se-line"><span class="line-desc">Sales Tax: $22.52</span><span class="line-cost">tax</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid (Credit Card)</span><span
+              class="line-cost bold">$272.79</span></div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">June 7, 2023</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #353782 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$63.11</div>
+            <div class="se-mileage">150,565 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Valvoline)</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Multi-Point Inspection (15)</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Steering Rack $1,811.99</span><span
+              class="line-cost">declined</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$63.11</span></div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="year-divider">2022</div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">October 22, 2022</div>
+            <div class="se-shop">Findlay Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #335648 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$848.59</div>
+            <div class="se-mileage">~144,500 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change + Multi-Point Inspection</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Valvoline Brake Fluid System Flush (12F)</span><span
+              class="line-cost">$144.95</span></div>
+          <div class="se-line"><span class="line-desc">Front Drive Train Service &mdash; 4AT (differential / front
+              axle)</span><span class="line-cost">$212.94</span></div>
+          <div class="se-line"><span class="line-desc">Valvoline Automatic Transmission Flush (6F/4F)</span><span
+              class="line-cost">$332.46</span></div>
+          <div class="se-line"><span class="line-desc">Spare Tire Pressure Check</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$848.59</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">April 28, 2022</div>
+            <div class="se-shop">Larry H. Miller Downtown Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #322735 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$45.33</div>
+            <div class="se-mileage">140,586 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Full Synthetic Oil Change (5W-30 Valvoline) + Multi-Point
+              Inspection</span><span class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Brake Flush $144.95 | Diff Service |
+              Trans Flush</span><span class="line-cost">declined</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$45.33</span></div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">March 17, 2022 <span class="milestone">MAJOR</span></div>
+            <div class="se-shop">Larry H. Miller Downtown Toyota Spokane &mdash; 1128 W 3rd Ave</div>
+            <div class="se-invoice">Invoice #319336 &nbsp;|&nbsp; Advisor: Jordan Martinez</div>
+          </div>
+          <div>
+            <div class="se-total">$1,800.72</div>
+            <div class="se-mileage">139,367 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Timing Belt (8-Cylinder) + Water Pump Replacement</span><span
+              class="line-cost">$978.55</span></div>
+          <div class="se-line"><span class="line-desc">Fuel Injector Reseal &mdash; Driver Side #1 (new o-ring, no
+              leak)</span><span class="line-cost">$230.00</span></div>
+          <div class="se-line"><span class="line-desc">Rear Wiper Blade Replacement</span><span
+              class="line-cost">$26.51</span></div>
+          <div class="se-line"><span class="line-desc">Multi-Point Inspection</span><span class="line-cost">incl.</span>
+          </div>
+          <div class="se-line"><span class="line-desc">Recommended but declined: Steering Rack $1,100 | CV Axles $1,100
+              ea | PS Flush | Brake Flush | Trans Flush</span><span class="line-cost">declined</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$1,800.72</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">March 14, 2022</div>
+            <div class="se-shop">Larry H. Miller Downtown Toyota Spokane &mdash; Parts Counter</div>
+            <div class="se-invoice">Invoice #3250104 &nbsp;|&nbsp; Parts Purchase</div>
+          </div>
+          <div>
+            <div class="se-total">$93.45</div>
+            <div class="se-mileage">~139,000 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">S039 Gauge Assembly (related to fuel sender / gas smell
+              diagnosis)</span><span class="line-cost">$85.73</span></div>
+          <div class="se-line"><span class="line-desc">Sales Tax: $7.72</span><span class="line-cost">tax</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid (Cash)</span><span
+              class="line-cost bold">$93.45</span></div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="year-divider">2021 &mdash; Texas</div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">December 17, 2021</div>
+            <div class="se-shop">Don Ringler Toyota &mdash; Temple, TX (P.O. Box 1928)</div>
+            <div class="se-invoice">Invoice #358701 &nbsp;|&nbsp; Advisor: McKenzie R. Good</div>
+          </div>
+          <div>
+            <div class="se-total">$72.00</div>
+            <div class="se-mileage">134,317 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">Toyota Conventional Oil + Filter Change</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Tire Rotation</span><span class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Multi-Point Vehicle Inspection</span><span
+              class="line-cost">incl.</span></div>
+          <div class="se-line"><span class="line-desc">Total Paid</span><span class="line-cost bold">$72.00</span></div>
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="year-divider">2020</div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">April 23, 2020</div>
+            <div class="se-shop">Alignment Shop (printout only &mdash; shop name not on document)</div>
+            <div class="se-invoice">Thrust Line Alignment Printout</div>
+          </div>
+          <div>
+            <div class="se-total">&mdash;</div>
+            <div class="se-mileage">~119,000 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">4-Wheel Thrust Line Alignment &mdash; VIN confirmed on
+              printout</span><span class="line-cost">cost N/A</span></div>
+          <div class="se-line"><span class="line-desc">LF: Camber -0.4&deg;, Caster 3.1&deg;, Toe 0.00&deg;
+              &nbsp;|&nbsp; RF: Camber -0.1&deg;, Caster 3.1&deg;, Toe 0.00&deg;</span><span class="line-cost"></span>
+          </div>
+          <div class="se-line"><span class="line-desc">Rear Total Toe: 0.05&deg;, Thrust Angle: -0.23&deg;</span><span
+              class="line-cost"></span></div>
+        </div>
+      </div>
+
+      <!-- Purchase -->
+      <div class="year-divider">~2010 &mdash; Purchase</div>
+
+      <div class="service-entry">
+        <div class="se-header">
+          <div class="se-meta">
+            <div class="se-date">~2022 <span class="milestone">PURCHASED</span></div>
+            <div class="se-shop">Spokane, WA</div>
+            <div class="se-invoice">Sales Brochure on File</div>
+          </div>
+          <div>
+            <div class="se-total">$10,000</div>
+            <div class="se-mileage">100,927 mi</div>
+          </div>
+        </div>
+        <div class="se-items">
+          <div class="se-line"><span class="line-desc">2004 Toyota Sequoia Limited 4WD &mdash; Phantom Gray Pearl
+              &mdash; 4.7L V8</span><span class="line-cost bold">$10,000</span></div>
+          <div class="se-line"><span class="line-desc">VIN: 5TDBT48A14S230766 &nbsp;|&nbsp; Color: Phantom Gray Pearl
+              &nbsp;|&nbsp; Engine: CTL CQA</span><span class="line-cost"></span></div>
+        </div>
+      </div>
+
+    </div><!-- /panel-right -->
+  </div><!-- /dashboard -->
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.getElementById('themeBtn');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        btn.textContent = '\uD83C\uDF19 Dark Mode';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = '\u2600 Light Mode';
+      }
     }
-  }
-</script>
+  </script>
 </body>
+
 </html>

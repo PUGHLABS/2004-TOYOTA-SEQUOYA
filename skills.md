@@ -6,10 +6,10 @@
 - **Engine:** 4.7L V8 2UZ-FE
 - **Transmission:** 4-speed automatic A750F (4WD)
 - **Color:** Phantom Gray Pearl
-- **Owner:** in Spokane WA 99203
+- **Owner:** Jeff Pugh, 221 W 24th Ave, Spokane WA 99203
 - **Customer #:** 8020698 (Findlay/LHM dealer system)
-- **Purchased:** ~02-22-2022, Spokane WA — $10,000 @ 100,927 mi
-- **Current Mileage:** 170,181 mi
+- **Purchased:** ~2010 from Emmons Autoplex, Spokane WA — $12,999 @ 100,927 mi
+- **Current Mileage:** ~169,255 mi (as of Feb 27, 2026)
 
 ## Project
 This is a local HTML service dashboard (`index.html`) that consolidates all service records for Jeff's Sequoia. The goal is accurate, 100% verified data from 53 scanned invoice images.
